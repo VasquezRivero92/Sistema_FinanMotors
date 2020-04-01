@@ -7,14 +7,14 @@
     <framework targetVersion="4.6.1" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="Sistema_FinanMotors.exe.manifest" size="22210">
+    <dependentAssembly dependencyType="install" codebase="Sistema_FinanMotors.exe.manifest" size="22172">
       <assemblyIdentity name="Sistema_FinanMotors.exe" version="1.0.0.1" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>qUl63P15W6QKDSMPpdHpO+WgIfS59lItn2lhQouEPkk=</dsig:DigestValue>
+        <dsig:DigestValue>OxLmgPJX3nwzU6vrogniiRxtk/12jOIKMeLKlgyPPBM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

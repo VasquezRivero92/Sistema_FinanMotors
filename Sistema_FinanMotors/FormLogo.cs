@@ -26,5 +26,10 @@ namespace Sistema_FinanMotors
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //FormMenuPrincipal.proforma();
+        }
     }
 }

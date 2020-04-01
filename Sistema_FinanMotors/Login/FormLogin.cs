@@ -137,7 +137,7 @@ namespace Sistema_FinanMotors
 
         private void FormLogin_Load(object sender, EventArgs e)
         {
-
+            txt_pass.PasswordChar = '*';
             txt_username.Text = Properties.Settings.Default.username;
             txt_pass.Text = Properties.Settings.Default.contraseña;
             ChkUser.Checked = Properties.Settings.Default.chkuser;
@@ -238,7 +238,12 @@ namespace Sistema_FinanMotors
                             Console.WriteLine("Error writing app settings");
                         }
                         FormMenuPrincipal.login = true;
-                        this.Close();
+                        this.Hide();
+                        FormMenuPrincipal promo = new FormMenuPrincipal();
+                        promo.Text = "Menu Principal";
+                        promo.StartPosition = FormStartPosition.CenterScreen;
+                        promo.ShowDialog();
+                        
                     }
                     else
                     {

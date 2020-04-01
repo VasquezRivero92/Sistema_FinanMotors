@@ -16,7 +16,7 @@ namespace Sistema_FinanMotors
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormMenuPrincipal());
+            Application.Run(new FormLogin());
         }
     }
 }

@@ -72,7 +72,7 @@ namespace Sistema_FinanMotors
             base.OnPaint(e);
             ControlPaint.DrawSizeGrip(e.Graphics, Color.Transparent, sizeGripRectangle);
         }
-       
+
         //METODO PARA ARRASTRAR EL FORMULARIO---------------------------------------------------------------------
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -82,7 +82,7 @@ namespace Sistema_FinanMotors
 
         private void PanelBarraTitulo_MouseDown(object sender, MouseEventArgs e)
         {
-           // ReleaseCapture();
+            // ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
         //METODOS PARA CERRAR,MAXIMIZAR, MINIMIZAR FORMULARIO------------------------------------------------------
@@ -116,15 +116,16 @@ namespace Sistema_FinanMotors
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
-            this.Close();
-        }
-
-        private void btnSalir_Click(object sender, EventArgs e)
-        {
             if (MessageBox.Show("¿Está seguro de cerrar?", "Alerta¡¡", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 Application.Exit();
             }
+
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+           
         }
 
         //METODOS PARA ANIMACION DE MENU SLIDING--
@@ -156,7 +157,7 @@ namespace Sistema_FinanMotors
             //    this.tmExpandirMenu.Stop();
             //else
             //    panelMenu.Width = panelMenu.Width + 5;
-            
+
         }
 
         private void tmContraerMenu_Tick(object sender, EventArgs e)
@@ -175,13 +176,13 @@ namespace Sistema_FinanMotors
             Form fh = formHijo as Form;
             fh.TopLevel = false;
             fh.FormBorderStyle = FormBorderStyle.None;
-            fh.Dock = DockStyle.Fill;            
+            fh.Dock = DockStyle.Fill;
             this.panelContenedorForm.Controls.Add(fh);
             this.panelContenedorForm.Tag = fh;
             fh.Show();
         }
         //METODO PARA MOSTRAR FORMULARIO DE LOGO Al INICIAR ----------------------------------------------------------
-       
+
 
         private void FormMenuPrincipal_Load(object sender, EventArgs e)
         {
@@ -214,6 +215,8 @@ namespace Sistema_FinanMotors
             TC.tipo_cambio();
             lb_tc.Text = "T.C: " + TC.TC_V.Remove(TC.TC_V.Length - 1);
             this.WindowState = FormWindowState.Maximized;
+            //panel_publico = panelContenedorForm;
+
         }
         public static bool ValidarNumeros(KeyPressEventArgs e)
         {
@@ -258,8 +261,6 @@ namespace Sistema_FinanMotors
 
         }
 
-        
-
         private void button1_Click_1(object sender, EventArgs e)
         {
             AbrirFormEnPanel(new FormProforma());
@@ -277,6 +278,9 @@ namespace Sistema_FinanMotors
             lblHora.Text = DateTime.Now.ToString("HH:mm:ssss");
         }
 
-
+        public static void proforma()
+        {
+            //AbrirFormEnPanel(new FormProforma());
+        }
     }
 }
